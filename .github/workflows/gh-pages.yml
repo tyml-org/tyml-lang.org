@@ -1,16 +1,28 @@
 on: push
-name: Build and deploy GH Pages
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
+    if: github.ref != 'refs/heads/main'
     steps:
-      - name: checkout
+      - name: 'checkout'
         uses: actions/checkout@v4
-      - name: build_and_deploy
+      - name: 'build'
         uses: shalzz/zola-deploy-action@master
         env:
-          # Target branch
           PAGES_BRANCH: gh-pages
-          # Provide personal access token
+          BUILD_DIR: .
           TOKEN: ${{ secrets.TOKEN }}
+          # BUILD_ONLY: true
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: 'checkout'
+        uses: actions/checkout@v4
+      - name: 'build and deploy'
+        uses: shalzz/zola-deploy-action@master
+        env:
+          PAGES_BRANCH: master
+          BUILD_DIR: .
+          TOKEN: ${{ secrets.TOKEN }}
+          REPOSITORY: tyml-org/tyml-org.github.io
