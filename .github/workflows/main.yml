@@ -25,4 +25,4 @@ jobs:
           PAGES_BRANCH: master
           BUILD_DIR: .
           TOKEN: ${{ secrets.TOKEN }}
-          REPOSITORY: tyml-org/tyml-org.github.io
+          REPOSITORY: tyml-org/tyml-lang.org
