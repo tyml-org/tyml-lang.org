@@ -48,7 +48,7 @@ mode = "Debug"
 
 When you validate configuration values, TYML strives to produce clear, intuitive messages.
 
-![tyml_error_en](/tyml_error_en.png)
+![tyml_error_en](tyml_error_en.png)
 
 # Installation
 

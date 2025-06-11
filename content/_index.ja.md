@@ -43,7 +43,7 @@ mode = "Debug"
 
 # 直感的なエラー表記
 設定値を検証した際には直感的なメッセージになるように工夫しています。
-![tyml_error_ja](/tyml_error_ja.png)
+![tyml_error_ja](tyml_error_ja.png)
 
 # インストール
 実際に利用するには2通りの方法があります
