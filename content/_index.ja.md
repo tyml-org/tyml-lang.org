@@ -34,14 +34,19 @@ type Settings {
 # !tyml ~/test.tyml
 # "!tyml"と記述することで型検査が有効になり、
 # エディタ支援を受けられるようになります
+# また、URLを直接指定することも可能です
 [settings]
 ip = "192.168.1.1"
 port = 25565
 mode = "Debug"
 ```
 
+# 直感的なエラー表記
+設定値を検証した際には直感的なメッセージになるように工夫しています。
+![tyml_error_ja](/tyml_error_ja.png)
+
 # インストール
 実際に利用するには2通りの方法があります
 
-1. VSCodeのマーケットプレイスから`TYML LSP Server for VSCode`をダウンロードする
-2. バイナリを利用する
+1. VSCodeのマーケットプレイスから[`TYML for VSCode (QuickStart)`](quick)をダウンロードする
+2. [バイナリを利用する](https://github.com/tyml-org/tyml/releases)(or `cargo install`)
