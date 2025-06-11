@@ -54,5 +54,5 @@ When you validate configuration values, TYML strives to produce clear, intuitive
 
 There are two ways to start using TYML:
 
-1. Download **[`TYML for VSCode (QuickStart)`](/quick-en)** from the VS Code Marketplace
+1. Download **[`TYML for VSCode (QuickStart)`](quick)** from the VS Code Marketplace
 2. Use a **[prebuilt binary](https://github.com/tyml-org/tyml/releases)** (or run `cargo install`)

@@ -27,7 +27,7 @@ setting = "invalid value"
 
 You should see an error due to type checking.
 
-![tyml_lsp_error_en](/tyml_lsp_error_en.png)
+![tyml_lsp_error_en](tyml_lsp_error_en.png)
 
 Finally, fix the file as follows:
 

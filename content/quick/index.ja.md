@@ -22,7 +22,7 @@ setting = "invalid value"
 ```
 すると型チェックによりエラーが出るはずです。
 
-![tyml_lsp_error_ja](/tyml_lsp_error_ja.png)
+![tyml_lsp_error_ja](tyml_lsp_error_ja.png)
 
 最後に以下のように修正します。
 ```toml
