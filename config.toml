@@ -26,7 +26,8 @@ extra_syntaxes_and_themes = ["syntaxes"]
 juice_logo_name = "TYML"
 juice_logo_path = "tyml.svg"
 juice_extra_menu = [
-    { title = "Github", link = "https://github.com/tyml-org"}
+    { title = "Docs(日本語)", link = "https://tyml-org.github.io/tyml-docs-jp" },
+    { title = "Github", link = "https://github.com/tyml-org" }
 ]
 juice_exclude_menu = [
     "exclude_from_nav"
