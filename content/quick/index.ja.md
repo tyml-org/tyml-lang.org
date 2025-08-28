@@ -4,6 +4,9 @@ description = "はじめる"
 weight = 2
 +++
 
+# REST-API向けのクイックスタート
+REST-API向けのクイックスタートが必要なら[ここ](https://tyml-org.github.io/tyml-docs-jp/chapter3/quick/)にあります
+
 # VSCode上にインストールする
 VSCodeを開いて拡張機能のマーケットプレイスから[`TYML for VSCode`](https://marketplace.visualstudio.com/items?itemName=bea4dev.tyml-lsp-vscode)をダウンロードします。
 
