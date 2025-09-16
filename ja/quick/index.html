@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>QuickStart |  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <style>
+    :root {
+        /* Primary theme color */
+        --primary-color: #6cc7cb;
+        /* Primary theme text color */
+        --primary-text-color: #2f485d;
+        --primary-text-color-over: #000;
+        /* Primary theme link color */
+        --primary-link-color: #62a9b7;
+        /* Secondary color: the background body color */
+        --secondary-color: #fcfaf6;
+        --secondary-text-color: #393939;
+        /* Highlight text color of table of content */
+        --toc-highlight-text-color: #d46e13;
+        --toc-background-color: white;
+        --code-color: rgb(166, 166, 166);
+        --code-background-color: #f2f2f200;
+
+        --shadow-color: #ddd;
+
+        /* Font used for headers (h1 & h2) */
+        --header-font-family: "Fira Sans", sans-serif;
+        /* Font used for text */
+        --text-font-family: "Fira Sans", sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --primary-color: #2f485d;
+            --primary-text-color: #d7d7d7;
+            --primary-text-color-over: #FFF;
+            --primary-link-color: #9b9b9b;
+            --secondary-color: #282828;
+            --secondary-text-color: #f2f2f2;
+            --toc-highlight-text-color: #f2f2f2;
+            --toc-background-color: #3a3a3a;
+            --code-color: white;
+            --code-background-color: #2f485d00;
+
+            --shadow-color: #202020;
+            --header-font-family: "Fira Sans", sans-serif;
+            --text-font-family: "Fira Sans", sans-serif;
+        }
+    }
+</style>
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://tyml-lang.org/juice.css">
+    
+    <link rel="stylesheet" href="https://tyml-lang.org/carbon.css">
+    
+</head>
+
+<body>
+    
+<header class="box-shadow">
+    
+
+<a href="https://tyml-lang.org/">
+    <div class="logo">
+        <img src="https://tyml-lang.org/tyml_white.svg" alt="logo" style="width: 80%; height: auto;">
+        
+    </div>
+</a>
+
+<nav>
+    
+    
+    
+    <a class="nav-item subtitle-text" href="https://tyml-lang.org/quick/">QuickStart</a>
+    
+    
+    
+        
+        <a class="nav-item subtitle-text" href="https://tyml-org.github.io/tyml-docs/chapter1/">Docs(English)</a>
+        
+        <a class="nav-item subtitle-text" href="https://tyml-org.github.io/tyml-docs-jp/chapter1">Docs(日本語)</a>
+        
+        <a class="nav-item subtitle-text" href="https://github.com/tyml-org">Github</a>
+        
+    
+</nav>
+
+</header>
+
+
+    <main>
+        
+        
+        
+        
+        
+        <div class="toc">
+            <div class="toc-sticky">
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://tyml-lang.org/ja/quick/#rest-apixiang-kenokuitukusutato">REST-API向けのクイックスタート</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://tyml-lang.org/ja/quick/#vscodeshang-niinsutorusuru">VSCode上にインストールする</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://tyml-lang.org/ja/quick/#xing-woxuan-yan-suru">型を宣言する</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://tyml-lang.org/ja/quick/#xing-tietukuwoyou-xiao-hua-suru">型チェックを有効化する</a>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        
+
+        <div class="content text">
+            
+<div class="heading-text">はじめる</div>
+<h1 id="rest-apixiang-kenokuitukusutato">REST-API向けのクイックスタート</h1>
+<p>REST-API向けのクイックスタートが必要なら<a href="https://tyml-org.github.io/tyml-docs-jp/chapter3/quick/">ここ</a>にあります</p>
+<h1 id="vscodeshang-niinsutorusuru">VSCode上にインストールする</h1>
+<p>VSCodeを開いて拡張機能のマーケットプレイスから<a href="https://marketplace.visualstudio.com/items?itemName=bea4dev.tyml-lsp-vscode"><code>TYML for VSCode</code></a>をダウンロードします。</p>
+<h1 id="xing-woxuan-yan-suru">型を宣言する</h1>
+<p>任意のフォルダに以下のような内容でファイル<code>example.tyml</code>を作成します。</p>
+<pre data-lang="tyml" style="background-color:#2b303b;color:#c0c5ce;" class="language-tyml "><code class="language-tyml" data-lang="tyml"><span style="color:#bf616a;">setting</span><span>: </span><span style="color:#b48ead;">int
+</span></code></pre>
+<p>こうすることで<code>setting</code>という名前の設定値が<code>int</code>型であることを宣言することができます。</p>
+<h1 id="xing-tietukuwoyou-xiao-hua-suru">型チェックを有効化する</h1>
+<p>次に、同じフォルダに以下のようなファイル<code>example.toml</code>を作成します。</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#65737e;"># !tyml example.tyml
+</span><span style="color:#bf616a;">setting </span><span>= &quot;</span><span style="color:#a3be8c;">invalid value</span><span>&quot;
+</span></code></pre>
+<p>すると型チェックによりエラーが出るはずです。</p>
+<p><img src="https://tyml-lang.org/ja/quick/tyml_lsp_error_ja.png" alt="tyml_lsp_error_ja" /></p>
+<p>最後に以下のように修正します。</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#65737e;"># !tyml example.tyml
+</span><span style="color:#bf616a;">setting </span><span>= </span><span style="color:#d08770;">100
+</span></code></pre>
+<p>これでエラーは消えるはずです。</p>
+
+
+        </div>
+
+        
+
+    </main>
+
+    
+<footer>
+    <small class="subtext">
+        <a href="https://github.com/tyml-org/">tyml-lang.org</a>
+    </small>
+</footer>
+
+</body>
+<script>
+    const scrollHandler = entries => {
+        // Find the first entry which intersecting and ratio > 0.9 to highlight.
+        let entry = entries.find(entry => {
+            return entry.isIntersecting && entry.intersectionRatio > 0.9;
+        });
+        if (!entry) return;
+
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+
+        // let url = new URL(`#${entry.target.id}`);
+        let link = document.querySelector(`.toc a[href$="${decodeURIComponent(`#${entry.target.id}`)}"]`)
+        if (link) {
+            link.classList.add("active");
+            link.scrollIntoView({ behavior: "auto", block: "nearest" });
+        }
+    };
+    // Set -100px root margin to improve highlight experience.
+    const observer = new IntersectionObserver(scrollHandler, { threshold: 1 });
+    let items = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
+    items.forEach(item => observer.observe(item));
+</script>
+
+</html>

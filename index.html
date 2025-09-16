@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <style>
+    :root {
+        /* Primary theme color */
+        --primary-color: #6cc7cb;
+        /* Primary theme text color */
+        --primary-text-color: #2f485d;
+        --primary-text-color-over: #000;
+        /* Primary theme link color */
+        --primary-link-color: #62a9b7;
+        /* Secondary color: the background body color */
+        --secondary-color: #fcfaf6;
+        --secondary-text-color: #393939;
+        /* Highlight text color of table of content */
+        --toc-highlight-text-color: #d46e13;
+        --toc-background-color: white;
+        --code-color: rgb(166, 166, 166);
+        --code-background-color: #f2f2f200;
+
+        --shadow-color: #ddd;
+
+        /* Font used for headers (h1 & h2) */
+        --header-font-family: "Fira Sans", sans-serif;
+        /* Font used for text */
+        --text-font-family: "Fira Sans", sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --primary-color: #2f485d;
+            --primary-text-color: #d7d7d7;
+            --primary-text-color-over: #FFF;
+            --primary-link-color: #9b9b9b;
+            --secondary-color: #282828;
+            --secondary-text-color: #f2f2f2;
+            --toc-highlight-text-color: #f2f2f2;
+            --toc-background-color: #3a3a3a;
+            --code-color: white;
+            --code-background-color: #2f485d00;
+
+            --shadow-color: #202020;
+            --header-font-family: "Fira Sans", sans-serif;
+            --text-font-family: "Fira Sans", sans-serif;
+        }
+    }
+</style>
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://tyml-lang.org/juice.css">
+    
+    <link rel="stylesheet" href="https://tyml-lang.org/carbon.css">
+    
+</head>
+
+<body>
+    
+
+    <header class="pos-absolute" style="background-color: transparent">
+        
+
+<a href="https://tyml-lang.org/">
+    <div class="logo">
+        <img src="https://tyml-lang.org/tyml_white.svg" alt="logo" style="width: 80%; height: auto;">
+        
+    </div>
+</a>
+
+<nav>
+    
+    
+    
+    <a class="nav-item subtitle-text" href="https://tyml-lang.org/quick/">QuickStart</a>
+    
+    
+    
+        
+        <a class="nav-item subtitle-text" href="https://tyml-org.github.io/tyml-docs/chapter1/">Docs(English)</a>
+        
+        <a class="nav-item subtitle-text" href="https://tyml-org.github.io/tyml-docs-jp/chapter1">Docs(日本語)</a>
+        
+        <a class="nav-item subtitle-text" href="https://github.com/tyml-org">Github</a>
+        
+    
+</nav>
+
+    </header>
+
+    <div class="hero">
+        
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<section class="text-center">
+    <h1 class="heading-text" style="font-size: 50px">
+        TYML: Type checker for markup language
+    </h1>
+    <h3 class="title-text">
+        A typedef language that guarantees the correctness of settings value.
+    </h3>
+    <div>
+        <a class="github-button" href="https://github.com/tyml-org/tyml" data-size="large" data-show-count="true"
+            aria-label="Star tyml on GitHub">Star</a>
+        <a href="https://discord.gg/aUHxkMqSTc" data-size="large">
+            <img alt="Discord" src="https://img.shields.io/discord/1382287953291776010.svg?label=Discord&logo=Discord&colorB=7289da&style=for-the-badge">
+        </a>
+    </div>
+</section>
+<img class="hero-image" style="width: 50%" src="https://tyml-lang.org/tyml.png">
+
+<div class="explore-more text"
+    onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">
+    Explore More ⇩
+</div>
+<style>
+    .hero section {
+        padding: 0 5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .hero section {
+            padding: 0 2rem;
+        }
+
+        .hero-image {
+            display: none
+        }
+    }
+</style>
+
+    </div>
+
+    
+
+    <main>
+        
+        
+        
+        
+        
+        <div class="toc">
+            <div class="toc-sticky">
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://tyml-lang.org/#overview">Overview</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://tyml-lang.org/#intuitive-error-messages">Intuitive Error Messages</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://tyml-lang.org/#installation">Installation</a>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        
+
+        <div class="content text">
+            
+    <div id="features" class="heading-text"></div>
+    <h1 id="overview">Overview</h1>
+<p>TYML makes it possible to add types to any configuration language and aims to replace <code>JsonSchema</code>.</p>
+<pre data-lang="tyml" style="background-color:#2b303b;color:#c0c5ce;" class="language-tyml "><code class="language-tyml" data-lang="tyml"><span style="color:#65737e;">// TYML can be written like this
+</span><span style="color:#65737e;">/// This style of comment is documentation
+</span><span style="color:#65737e;">/// Write in the form valueName: Type
+</span><span style="color:#bf616a;">settings</span><span>: {
+</span><span>    </span><span style="color:#bf616a;">ip</span><span>: </span><span style="color:#b48ead;">string
+</span><span>    </span><span style="color:#bf616a;">port</span><span>: </span><span style="color:#b48ead;">int
+</span><span>    </span><span style="color:#bf616a;">mode</span><span>: </span><span style="color:#b48ead;">Mode
+</span><span>}
+</span><span>
+</span><span style="color:#65737e;">/// You can also define enums
+</span><span style="color:#b48ead;">enum </span><span>Mode {
+</span><span>    </span><span style="color:#a3be8c;">&quot;Debug&quot;
+</span><span>    </span><span style="color:#a3be8c;">&quot;Release&quot;
+</span><span>}
+</span><span>
+</span><span style="color:#65737e;">/// You can also define a struct
+</span><span style="color:#b48ead;">type </span><span>Settings {
+</span><span>    </span><span style="color:#bf616a;">ip</span><span>: </span><span style="color:#b48ead;">string
+</span><span>    </span><span style="color:#bf616a;">port</span><span>: </span><span style="color:#b48ead;">int
+</span><span>    </span><span style="color:#bf616a;">mode</span><span>: </span><span style="color:#b48ead;">Mode
+</span><span>}
+</span></code></pre>
+<p>The types defined in TYML can be used with any configuration language.
+Currently supported formats are <code>ini</code> and <code>toml</code>.</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#65737e;"># !tyml ~/test.tyml
+</span><span style="color:#65737e;"># By writing “!tyml” type checking is enabled
+</span><span style="color:#65737e;"># and you can benefit from editor assistance.
+</span><span style="color:#65737e;"># You can also specify a URL directly.
+</span><span>[settings]
+</span><span style="color:#bf616a;">ip </span><span>= &quot;</span><span style="color:#a3be8c;">192.168.1.1</span><span>&quot;
+</span><span style="color:#bf616a;">port </span><span>= </span><span style="color:#d08770;">25565
+</span><span style="color:#bf616a;">mode </span><span>= &quot;</span><span style="color:#a3be8c;">Debug</span><span>&quot;
+</span></code></pre>
+<h1 id="intuitive-error-messages">Intuitive Error Messages</h1>
+<p>When you validate configuration values, TYML strives to produce clear, intuitive messages.</p>
+<p><img src="https://tyml-lang.org/tyml_error_en.png" alt="tyml_error_en" /></p>
+<h1 id="installation">Installation</h1>
+<p>There are two ways to start using TYML:</p>
+<ol>
+<li>Download <strong><a href="https://tyml-lang.org/quick"><code>TYML for VSCode (QuickStart)</code></a></strong> from the VS Code Marketplace</li>
+<li>Use a <strong><a href="https://github.com/tyml-org/tyml/releases">prebuilt binary</a></strong> (or run <code>cargo install</code>)</li>
+</ol>
+
+    
+        </div>
+
+        
+
+    </main>
+
+    
+<footer>
+    <small class="subtext">
+        <a href="https://github.com/tyml-org/">tyml-lang.org</a>
+    </small>
+</footer>
+
+</body>
+<script>
+    const scrollHandler = entries => {
+        // Find the first entry which intersecting and ratio > 0.9 to highlight.
+        let entry = entries.find(entry => {
+            return entry.isIntersecting && entry.intersectionRatio > 0.9;
+        });
+        if (!entry) return;
+
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+
+        // let url = new URL(`#${entry.target.id}`);
+        let link = document.querySelector(`.toc a[href$="${decodeURIComponent(`#${entry.target.id}`)}"]`)
+        if (link) {
+            link.classList.add("active");
+            link.scrollIntoView({ behavior: "auto", block: "nearest" });
+        }
+    };
+    // Set -100px root margin to improve highlight experience.
+    const observer = new IntersectionObserver(scrollHandler, { threshold: 1 });
+    let items = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
+    items.forEach(item => observer.observe(item));
+</script>
+
+</html>
